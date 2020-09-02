@@ -1,0 +1,6 @@
+framework module Pods_IJKMediaPlayer_Example {
+  umbrella header "Pods-IJKMediaPlayer_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

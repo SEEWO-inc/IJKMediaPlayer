@@ -1,0 +1,6 @@
+framework module Pods_IJKMediaPlayer_Tests {
+  umbrella header "Pods-IJKMediaPlayer_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

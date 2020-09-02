@@ -1,0 +1,22 @@
+{
+  "name": "IJKMediaPlayer",
+  "version": "0.1.0",
+  "summary": "A short description of IJKMediaPlayer.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/qqingweihao@163.com/IJKMediaPlayer",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "qqingweihao@163.com": "guoqingwei@cvte.com"
+  },
+  "source": {
+    "git": "https://github.com/qqingweihao@163.com/IJKMediaPlayer.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "IJKMediaPlayer/Classes/**/*"
+}
