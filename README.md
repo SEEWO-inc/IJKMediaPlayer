@@ -1,7 +1,7 @@
 # IJKMediaPlayer
 
 ## Summary
-基于 [ijkplayer](https://github.com/bilibili/ijkplayer) 编译的Static and Dynamic Framework，支持常见主流视频格式播放，支持https, 支持rtmp。
+基于 [ijkplayer](https://github.com/bilibili/ijkplayer) 编译的Dynamic Framework，支持常见主流视频格式播放，支持https, 支持rtmp。
 
 感谢优秀的的ijkplayer项目的作者及其贡献者为开源社区做出的贡献，这里只是通过更改配置文件来进行编译得到Framework，未对源码部分做修改。
 
