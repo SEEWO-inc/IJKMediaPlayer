@@ -13,19 +13,19 @@ ijkplayer的编译依赖的另外两个仓库
 
 ### step1: 获取依赖的ffmpeg 和 openssl源码，配置支持的各种架构
 
-```
+```bash
 
 ./init-ios.sh
 
 ./init-ios-openssl.sh #用于支持https协议
 
+```
+
 在init-ios.sh文件里，IJK_FFMPEG_COMMIT字段定义了依赖的ffmpeg源码git tag。
 
-```
+如果需要编译其他版本的ffmpeg，去 https://github.com/bilibili/FFmpeg 查询tag，然后更新到这里即可~
 
-如果需要编译其他版本的ffmpeg，去https://github.com/bilibili/FFmpeg查询tag，然后更新到这里即可~
-
-```
+```bash
 
 #! /usr/bin/env bash
 #
@@ -57,7 +57,7 @@ IJK_FFMPEG_LOCAL_REPO=extra/ffmpeg
 
 如果需要编译其他版本的openssl，去https://github.com/bilibili/openssl查询tag，然后更新到这里即可~
 
-```
+```bash
 
 #! /usr/bin/env bash
 #
@@ -121,7 +121,7 @@ Not support: swf
 
 我这里为了在module-lite的基础上支持avi，rm, rmvb, 3gp，mpg, wmv的视频，增加的编译选项
 
-```
+```bash
 
 # 开启openssl编译选项
 echo 'export COMMON_FF_CFG_FLAGS="$COMMON_FF_CFG_FLAGS --enable-openssl"' >> config/module.sh
@@ -164,7 +164,7 @@ echo 'export COMMON_FF_CFG_FLAGS="$COMMON_FF_CFG_FLAGS --enable-decoder=opus"' >
 
 
 
-# # 开启parser编译选项
+#  开启parser编译选项
 echo 'export COMMON_FF_CFG_FLAGS="$COMMON_FF_CFG_FLAGS --enable-parser=ac3"' >> config/module.sh
 echo 'export COMMON_FF_CFG_FLAGS="$COMMON_FF_CFG_FLAGS --enable-parser=mpeg*"' >> config/module.sh
 echo 'export COMMON_FF_CFG_FLAGS="$COMMON_FF_CFG_FLAGS --enable-parser=cook"' >> config/module.sh
@@ -174,7 +174,7 @@ echo 'export COMMON_FF_CFG_FLAGS="$COMMON_FF_CFG_FLAGS --enable-parser=h263"' >>
 
 ### step3:  切换到ios目录编译ffmpeg和openssl
 
-```
+```bash
 
 cd ios
 
@@ -217,7 +217,7 @@ bilibili默认的ijkplayer依赖的ffmpeg版本是基于ffmpeg3.4的，不过bil
 
 config/mudule.sh
 
-```
+```bash
 # 关闭bitstream filter（ffmpeg4.0）
 export COMMON_FF_CFG_FLAGS="$COMMON_FF_CFG_FLAGS --disable-bsf=eac3_core"
 
@@ -233,7 +233,7 @@ export COMMON_FF_CFG_FLAGS="$COMMON_FF_CFG_FLAGS --disable-bsf=eac3_core"
 
 找到有关 version-min 小于8.0的都改成8.0
 
-```
+```bash
 #do-compile-ffmpeg
 if [ "$FF_ARCH" = "i386" ]; then
     FF_BUILD_NAME="ffmpeg-i386"
@@ -318,7 +318,7 @@ fi
 
 使用ffmpeg的一些命令查找（不同版本的ffmpeg，输出会有差异）
 
-```
+```bash
 ffmpeg -version
 ffmpeg --help   
 ffmpeg -demuxers   #解复用, 与formats类似
